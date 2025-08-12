@@ -18,7 +18,7 @@
 
 / {
     behaviors {
-        #include "macros.dtsi"
+        /* #include "macros.dtsi" */
         #include "version.dtsi"
 
         hm: homerow_mods {
@@ -29,6 +29,50 @@
             quick_tap_ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+    };
+
+    macros {
+        macro_ae: macro_aa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(KP_NUMBER_0) &kp LA(KP_NUMBER_2) &kp LA(KP_NUMBER_3) &kp LA(KP_NUMBER_0)>;
+            label = "MACRO_AA";
+        };
+
+        macro_oe: macro_oe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(KP_NUMBER_0) &kp LA(KP_NUMBER_2) &kp LA(KP_NUMBER_4) &kp LA(KP_NUMBER_8)>;
+            label = "MACRO_OE";
+        };
+
+        macro_aa: macro_ae {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(KP_NUMBER_0) &kp LA(KP_NUMBER_2) &kp LA(KP_NUMBER_2) &kp LA(KP_NUMBER_9)>;
+            label = "MACRO_AE";
+        };
+
+        macro_cap_ae: macro_cap_ae {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(KP_NUMBER_0) &kp LA(KP_NUMBER_1) &kp LA(KP_NUMBER_9) &kp LA(KP_NUMBER_8)>;
+            label = "MACRO_CAP_AE";
+        };
+
+        macro_cap_oe: macro_cap_oe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(KP_NUMBER_0) &kp LA(KP_NUMBER_2) &kp LA(KP_NUMBER_1) &kp LA(KP_NUMBER_6)>;
+            label = "MACRO_CAP_OE";
+        };
+
+        macro_cap_aa: macro_cap_aa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(KP_NUMBER_0) &kp LA(KP_NUMBER_1) &kp LA(KP_NUMBER_9) &kp KP_NUMBER_7>;
+            label = "MACRO_CAP_AA";
         };
     };
 
